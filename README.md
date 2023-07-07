@@ -1,14 +1,14 @@
 # Task Organizer
 
-Este é um projeto de To-Do List (Lista de Tarefas) desenvolvido usando React no front-end
+Este é um projeto de To-Do List (Lista de Tarefas) desenvolvido usando React no front-end, respeitando a
+responsividade e com um design moderno
 
-[Demonstração da aplicação](https://github.com/GabrielLopesAgiova/task-organizer/assets/48497471/b1491379-de85-42a9-8c6e-3fcd1110fb5b)
+[Demonstração da aplicação.webm](https://github.com/GabrielLopesAgiova/task-organizer/assets/48497471/40e1e1cd-51a9-40ea-ae56-b569300346d6)
 
 ## Funcionalidades
 
 - Exibir uma lista de tarefas
 - Adicionar uma nova tarefa
-- Marcar uma tarefa como concluída
 - Editar uma tarefa existente
 - Excluir uma tarefa
 
