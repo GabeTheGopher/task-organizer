@@ -15,8 +15,7 @@ responsividade e com um design moderno
 ## Tecnologias utilizadas
 
 - React: Biblioteca JavaScript para a construção da interface do usuário
-- HTML: Linguagem de marcação para estruturar a página
-- CSS: Linguagem de estilização para a aparência visual da página
+- Styled-components: Linguagem de estilização para a aparência visual da página
 
 ## Instalação e execução
 
