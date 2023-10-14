@@ -19,7 +19,7 @@ export const AuthContextProvider = ({children}) => {
 
         signInWithPopup(auth, provider)
         .catch((error) => {
-            console.error('Erro ao autenticar com o Google:', error);
+            console.error(error);
         });
     }
 
