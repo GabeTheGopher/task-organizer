@@ -6,9 +6,9 @@ export default function Body({tasks, setTasks, listData}) {
 
     return(
         <StyledBody>
-            {listData.map(item => (
+            {listData.map((item, i) => (
                 <CardContainer
-                key={item.title}
+                key={i}
                 title={item.title}
                 color={item.color} 
                 background={item.background}

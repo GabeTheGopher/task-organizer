@@ -5,11 +5,11 @@ export default function CardColumn({tasks, setTasks, title, color, background}) 
 
     return(
         <StyledCardColumn>
-            {tasks.map(item => {
+            {tasks.map((item, i) => {
                 if(item.status === title) {
                     return(
                         <Card 
-                            key={item.title}
+                            key={i}
                             id={item.id}
                             title={item.title}
                             description={item.description}
@@ -19,6 +19,8 @@ export default function CardColumn({tasks, setTasks, title, color, background}) 
                             setTasks={setTasks}
                         />
                     )
+                } else {
+                    return <></>
                 }
             })}
         </StyledCardColumn>

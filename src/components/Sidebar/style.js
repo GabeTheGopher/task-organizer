@@ -16,7 +16,7 @@ export const StyledSidebarTitle = styled.h2`
     font-size: 2rem;
     overflow-wrap: break-word;
     overflow:hidden;
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
     overflow: hidden;
 
 `

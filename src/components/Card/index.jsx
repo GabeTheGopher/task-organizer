@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+
 import { StyledCard, StyledCardDescription, StyledCardTitle } from "./style";
 import ActionCardSection from "../ActionCardSection";
 

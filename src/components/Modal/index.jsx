@@ -2,6 +2,8 @@ import { useState } from "react";
 import Select from "react-select"
 import { StyledFormButton, StyledFormDescriptionInput, StyledFormTitleInput, StyledModal, StyledModalBackground } from "./style"
 import { showErrorToast, showSuccessToast } from "../../helpers/toastify";
+import { doc, updateDoc } from "firebase/firestore";
+import { db } from "../../services/firebase";
 
 export default function Modal({ isModalOpen, setIsModalOpen, id, tasks, setTasks }) {
 
@@ -35,7 +37,7 @@ export default function Modal({ isModalOpen, setIsModalOpen, id, tasks, setTasks
         setSelectedOption(option.value)
     };
 
-    const handleClick = () => {
+    const handleClick = async () => {
 
         if (!titleInput) {
             showErrorToast("O título não pode ser vazio")
@@ -53,13 +55,19 @@ export default function Modal({ isModalOpen, setIsModalOpen, id, tasks, setTasks
             if (taskToUpdateIndex !== -1) {
                 // Cria uma cópia atualizada da tarefa
                 const updatedTask = {
-                    id: id,
+                    id,
                     title: titleInput,  
                     description: descriptionInput,
                     status: selectedOption,
                 };
 
                 const updatedTasks = [...tasks];
+
+                await updateDoc(doc(db, 'tasks', id), {
+                    title: titleInput,
+                    description: descriptionInput,
+                    status: selectedOption
+                })
 
                 updatedTasks[taskToUpdateIndex] = updatedTask;
 

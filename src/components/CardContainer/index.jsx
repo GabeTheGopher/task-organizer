@@ -1,4 +1,3 @@
-import Card from "../Card";
 import CardColumn from "../CardColumn";
 import { StyledCardContainer, StyledCardContainerTitle } from "./style";
 
